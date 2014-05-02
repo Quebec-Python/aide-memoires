@@ -1,22 +1,14 @@
-.. Aide-mémoires Québec-Python documentation master file, created by
-   sphinx-quickstart on Thu May  1 23:42:58 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Bienvenue à notre documentation en ligne
+========================================
 
-Welcome to Aide-mémoires Québec-Python's documentation!
-=======================================================
+Vous y retrouverez tous les aide-mémoires que nous rédigeons pour nos
+ateliers et nos présentations.
 
-Contents:
+Table des matières
+------------------
 
 .. toctree::
    :maxdepth: 2
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Python, le langage <python>
 
