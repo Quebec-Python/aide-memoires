@@ -22,6 +22,48 @@ Création de variables
        "une_2e_cle": "une_2e_valeur"
    }
    
+Opérations
+----------
+
+Arithmétique
+~~~~~~~~~~~~
+
+.. code-block:: python
+   :linenos:
+   
+   x = 3
+   y = 4
+   
+   # Addition
+   x + y
+   # Soustraction
+   x - y
+   # Multiplication
+   x * y
+   # Division
+   x / y
+   # Division entière
+   x // y
+   # Modulo (reste de la division)
+   x % y
+   # Puissance
+   x ** y
+
+Comparaison
+~~~~~~~~~~~
+
+.. code-block:: python
+   :linenos:
+   
+   x = 3; y = 4; z = 5
+   
+   # Égalité
+   (x == y, x != y)
+   # Inégalité
+   (x > y, x < y, x >= y, x <= y)
+   # Chaînage de comparaisons
+   x < y < z
+   
 Structures de contrôle
 ----------------------
 
