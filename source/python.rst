@@ -1,8 +1,8 @@
 Python
 ======
 
-Déclaration de variable
------------------------
+Création de variables
+---------------------
 
 .. code-block:: python
    :linenos:
