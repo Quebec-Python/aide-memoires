@@ -19,7 +19,16 @@ Création de variables
    
    un_dictionnaire = {
        "une_cle": "une_valeur",
-       "une_2e_cle": "une_2e_valeur"
+       "une_2e_cle": "une_2e_valeur",
+   }
+
+   # Ne contiendra qu'une seule fois pomme
+   un_ensemble = {
+       "pomme",
+       "pomme",
+       "orange",
+       "poire",
+       "banane",
    }
    
 Opérations
@@ -31,8 +40,7 @@ Arithmétique
 .. code-block:: python
    :linenos:
    
-   x = 3
-   y = 4
+   x = 3; y = 4
    
    # Addition
    x + y
@@ -55,7 +63,7 @@ Comparaison
 .. code-block:: python
    :linenos:
    
-   x = 3; y = 4; z = 5
+   x = 3; y = 4; z = 5; a = [1, 2, 3, 4, 5]
    
    # Égalité
    (x == y, x != y)
@@ -63,6 +71,10 @@ Comparaison
    (x > y, x < y, x >= y, x <= y)
    # Chaînage de comparaisons
    x < y < z
+   # opérateur "dans"
+   y in a
+   # 
+
    
 Structures de contrôle
 ----------------------
@@ -90,6 +102,17 @@ Boucle *For*
    
    for couleur in couleurs:
        print couleur
+
+.. code-block:: python
+   :linenos:
+   
+   donnees = [False, False, True, False]
+   
+   for x in donnees:
+       if not x:
+           break
+   else:
+       print("Affiche ceci s'il n'y a pas eu de break")
 
 Les fonctions
 -------------
@@ -142,3 +165,51 @@ Les modules
    
    print random.shuffle([1, 2, 3])
    
+Les exceptions
+--------------
+
+.. code-block:: python
+    :linenos:
+   
+    # Les blocs else et finally sont optionnels
+    try:
+        raise Exception("Mon Exception")
+    except (Exception, MemoryError) as e:
+        print("Erreur survenue: ", e)
+    else:
+        print("Si aucune erreur n'est survenue, afficher ceci")
+    finally:
+        print("Toujours affiché")
+
+Compréhensions
+--------------
+
+Liste
+~~~~~
+
+.. code-block:: python
+    :linenos:
+   
+    a = [1, 2, 3, 4]
+
+    carres = [x**2 for x in a]
+    pairs = [x for x in a if not x % 2]
+
+Ensemble
+~~~~~~~~
+
+.. code-block:: python
+    :linenos:
+   
+    a = {1, 2, 3, 4}
+
+    carres = {x**2 for x in a}
+    pairs = {x for x in a if not x % 2}
+
+Dictionnaire
+~~~~~~~~~~~~
+
+.. code-block:: python
+    :linenos:
+   
+    carres = {x: x**2 for x in (2, 4, 6)}
