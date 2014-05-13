@@ -7,7 +7,8 @@ Création de variables
 .. code-block:: python
    :linenos:
    
-   un_bool = True # False
+   # Peut être True ou False
+   un_bool = True
    
    un_chiffre = 1000
    
@@ -31,6 +32,44 @@ Création de variables
        "banane",
    }
    
+Structures de contrôle
+----------------------
+
+*Si* logique
+~~~~~~~~~~~~
+
+.. code-block:: python
+   :linenos:
+   
+   if une_condition:
+       print "Oui"
+   elif une_autre_condition:
+       print "Non"
+   else:
+       print "Wat"
+
+Boucle *For*
+~~~~~~~~~~~~
+
+.. code-block:: python
+   :linenos:
+   
+   couleurs = ["rouge", "bleu", "vert"]
+   
+   for couleur in couleurs:
+       print couleur
+
+.. code-block:: python
+   :linenos:
+   
+   donnees = [False, False, True, False]
+   
+   for x in donnees:
+       if not x:
+           break
+   else:
+       print("Affiche ceci s'il n'y a pas eu de break")
+
 Opérations
 ----------
 
@@ -71,48 +110,15 @@ Comparaison
    (x > y, x < y, x >= y, x <= y)
    # Chaînage de comparaisons
    x < y < z
-   # opérateur "dans"
+   # Opérateur "dans"
    y in a
-   # 
+   # Oprérateur "est"
+   y is z
 
+   # Tout élément non nul ou non vide est évalué à vrai
+   if z:
+       print("Sera affiché")
    
-Structures de contrôle
-----------------------
-
-*Si* logique
-~~~~~~~~~~~~
-
-.. code-block:: python
-   :linenos:
-   
-   if une_condition:
-       print "Oui"
-   elif une_autre_condition:
-       print "Non"
-   else:
-       print "Wat"
-
-Boucle *For*
-~~~~~~~~~~~~
-
-.. code-block:: python
-   :linenos:
-   
-   couleurs = ["rouge", "bleu", "vert"]
-   
-   for couleur in couleurs:
-       print couleur
-
-.. code-block:: python
-   :linenos:
-   
-   donnees = [False, False, True, False]
-   
-   for x in donnees:
-       if not x:
-           break
-   else:
-       print("Affiche ceci s'il n'y a pas eu de break")
 
 Les fonctions
 -------------
