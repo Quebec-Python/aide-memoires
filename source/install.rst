@@ -47,3 +47,41 @@ La troisème commande affiche l'aide de la commande *fab* qui provient du module
 *Fabric*.
 
 Si tout se déroule bien pour ces étapes, vous êtes en bateau !
+
+Environnements virtuels
+=======================
+
+Installer des paquets en Python à l'aide de pip ou easy_install demande par
+défaut les accès administrateurs. Leur installation terminent également dans
+votre installation système, ce qui peut causer des ennuis.
+
+Pour remédier à ce problème, Vous pouvez créer un environnement virtuel:
+
+.. code-block:: bash
+    :linenos:
+    
+    sudo pip install virtualenv
+    virtualenv monvenv
+    source ./monvenv/bin/activate
+
+
+Déploiement
+~~~~~~~~~~~
+
+Si vous publiez votre code par github, bitbucket ou similaire, il est recommandé
+de fournir un fichier `requirements.txt` qui permet de recréer l'environnement
+virtuel, soit les dépendances de votre projet:
+
+.. code-block:: bash
+    :linenos:
+
+    pip freeze > ./requirements.py
+
+
+Pour recréer votre environnement:
+
+.. code-blocks:: bash
+    :linenos:
+
+    pip install -r ./requirements.txt
+
