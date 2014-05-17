@@ -80,8 +80,9 @@ virtuel, soit les dépendances de votre projet:
 
 Pour recréer votre environnement:
 
-.. code-blocks:: bash
+.. code-block:: bash
     :linenos:
 
     pip install -r ./requirements.txt
+
 
