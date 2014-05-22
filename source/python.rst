@@ -16,7 +16,7 @@ Création de variables
    
    une_liste_mutable = [1, 2, 3, 4]
    
-   une_liste_non_mutable = (1, 2, 3, 4)
+   une_liste_non_mutable = (1, 2, 3, 4) #nommé tuple
    
    un_dictionnaire = {
        "une_cle": "une_valeur",
@@ -42,11 +42,11 @@ Structures de contrôle
    :linenos:
    
    if une_condition:
-       print "Oui"
+       print("Oui")
    elif une_autre_condition:
-       print "Non"
+       print("Non")
    else:
-       print "Wat"
+       print("Aucune condition dans le if ou le elif n'est Vrai")
 
 Boucle *For*
 ~~~~~~~~~~~~
@@ -57,7 +57,7 @@ Boucle *For*
    couleurs = ["rouge", "bleu", "vert"]
    
    for couleur in couleurs:
-       print couleur
+       print(couleur)
 
 .. code-block:: python
    :linenos:
@@ -66,7 +66,7 @@ Boucle *For*
    
    for x in donnees:
        if not x:
-           break
+           break  #Arrete l'execution et sort de la boucle
    else:
        print("Affiche ceci s'il n'y a pas eu de break")
 
@@ -112,7 +112,7 @@ Comparaison
    x < y < z
    # Opérateur "dans"
    y in a
-   # Oprérateur "est"
+   # Opérateur "est"
    y is z
 
    # Tout élément non nul ou non vide est évalué à vrai
@@ -135,8 +135,11 @@ Les fonctions
 
    bien_le_bonjour("Bernard")
 
+Programmation orienté objet
+---------------------------
+
 Les classes
------------
+~~~~~~~~~~~
 
 .. code-block:: python
    :linenos:
@@ -159,6 +162,27 @@ Les classes
            Roule ma boule !
            """
            self.position_x, self.position_y = x, y
+
+L'héritage
+~~~~~~~~~~
+
+.. code-block:: python
+   :linenos:
+
+   #Animal est un Objet
+   class Animal:
+       def __init__(self):
+           pass
+
+   #Cheval est un Animal
+   class Cheval(Animal):
+       pass #Contient tous les attributs et méthodes de Animal
+
+   #Centaure est un Cheval et un Humain
+   class Centaure(Cheval, Humain):
+       def __init__(self):
+           super().__init__(): #Appel la méthode __init__ de Cheval puis de Humain
+
 
 Les modules
 -----------
