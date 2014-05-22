@@ -177,12 +177,42 @@ L'héritage
 
    # Cheval est un Animal
    class Cheval(Animal):
-       pass # Contient tous les attributs et méthodes de Animal
+       """
+       Une classe qui hérite d'une autre contient tous les attributs et
+       méthodes de son parent. Ici, Cheval hérite d'Animal.
+       """
+       def galoper(self):
+           """
+           Définition d'une fonction propre à Cheval.
+           """
+           print("Je galope!")
+
+   class Humain(Animal):
+       def __init__(self):
+           print("Init de Humain")
+
+       def parler(self):
+           print("Je parle!")
 
    # Centaure est un Cheval et un Humain
    class Centaure(Cheval, Humain):
        def __init__(self):
-           super().__init__(): # Appel la méthode __init__ de Cheval puis de Humain
+           # super() utilise le MRO pour trouver l'objet parent
+           # Dans ce cas-ci, tente d'appeler le __init__ de Cheval, sinon repli
+           # sur celui de Humain. Puisque Cheval n'a pas de __init__ qui lui 
+           # est propre, celui de Humain() est appelé.
+           super().__init__()
+
+           # Appel explicite utilisant le polymorphisme
+           Humain.__init__(self)
+
+           # Cet appel exécutera le __init__ de Animal
+           Cheval.__init__(self)
+
+           # Appel des méthodes héritées
+           self.galoper()
+           self.parler()
+
 
 
 Les modules
