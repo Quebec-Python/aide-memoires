@@ -60,8 +60,13 @@ Pour remédier à ce problème, Vous pouvez créer un environnement virtuel:
 .. code-block:: bash
     :linenos:
     
+    # Installer virtualenv si ce n'est pas déjà fait
     sudo pip install virtualenv
+
+    # Créer un virtualenv
     virtualenv monvenv
+
+    # Activer l'environnement virtuel
     source ./monvenv/bin/activate
 
 
