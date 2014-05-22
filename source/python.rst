@@ -16,7 +16,7 @@ Création de variables
    
    une_liste_mutable = [1, 2, 3, 4]
    
-   une_liste_non_mutable = (1, 2, 3, 4) #nommé tuple
+   une_liste_non_mutable = (1, 2, 3, 4) # Aussi nommée tuple
    
    un_dictionnaire = {
        "une_cle": "une_valeur",
@@ -46,7 +46,7 @@ Structures de contrôle
    elif une_autre_condition:
        print("Non")
    else:
-       print("Aucune condition dans le if ou le elif n'est Vrai")
+       print("Aucune condition dans le if ou le elif n'est Vraie")
 
 Boucle *For*
 ~~~~~~~~~~~~
@@ -66,7 +66,8 @@ Boucle *For*
    
    for x in donnees:
        if not x:
-           break  #Arrete l'execution et sort de la boucle
+           # Arrête l'exécution et sort de la boucle
+           break
    else:
        print("Affiche ceci s'il n'y a pas eu de break")
 
@@ -169,19 +170,19 @@ L'héritage
 .. code-block:: python
    :linenos:
 
-   #Animal est un Objet
+   # Animal est un Objet
    class Animal:
        def __init__(self):
            pass
 
-   #Cheval est un Animal
+   # Cheval est un Animal
    class Cheval(Animal):
-       pass #Contient tous les attributs et méthodes de Animal
+       pass # Contient tous les attributs et méthodes de Animal
 
-   #Centaure est un Cheval et un Humain
+   # Centaure est un Cheval et un Humain
    class Centaure(Cheval, Humain):
        def __init__(self):
-           super().__init__(): #Appel la méthode __init__ de Cheval puis de Humain
+           super().__init__(): # Appel la méthode __init__ de Cheval puis de Humain
 
 
 Les modules
@@ -189,12 +190,18 @@ Les modules
 
 .. code-block:: python
    :linenos:
-   
+
+   # Importation absolue
    from python import antigravity
    import random
-   
+
    print random.shuffle([1, 2, 3])
-   
+
+   # Importation relative
+   from .module_dans_le_repertoire_courant import unObjet
+   from ..mon_module import unObjet
+
+
 Les exceptions
 --------------
 
